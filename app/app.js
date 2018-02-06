@@ -26,55 +26,59 @@
 
     }
 
-    var rentals = [
-            {
+    var rentals = [[{
                 name: 'Toyota Prius',
-                type: "Compact",
-                description: ". . .",
+                description: "The Toyota Prius is a full hybrid electric automobile developed by Toyota",
                 price: 50,
                 img: "../img/prius.png"
             },
             {
                 name: 'Ford Fiesta',
-                type: "Compact",
                 description: ". . .",
-                price: 50
+                price: 50,
+                img: "../img/fiesta.png"
             },{
                 name: 'Ford Focus',
-                type: "Compact",
                 description: ". . .",
-                price: 50
-            },{
+                price: 50,
+                img: "../img/focus.png"
+            }],[{
                 name: 'Chevrolet Tahoe',
                 type: "SUV",
                 description: ". . .",
-                price: 150
+                price: 150,
+                img: "../img/tahoe.png"
             },{
                 name: 'GMC Yukon-Denali',
                 type: "SUV",
                 description: ". . .",
-                price: 150
+                price: 150,
+                img: "../img/denali.png"
             },{
                 name: 'Ford Explorer',
                 type: "SUV",
                 description: ". . .",
-                price: 150
-            },{
+                price: 150,
+                img: "../img/explorer.png"
+            }],[{
                 name: 'Jaguar XF',
                 type: "Premium",
                 description: ". . .",
-                price: 550
+                price: 550,
+                img: "../img/jaguarXF.png"
             },{
                 name: 'Chrysler 300',
                 type: "Premium",
                 description: ". . .",
-                price: 550
+                price: 550,
+                img: "../img/300.png"
             },{
                 name: 'Mercedes E350',
                 type: "Premium",
                 description: ". . .",
-                price: 550
-            }
+                price: 550,
+                img: "../img/mercedes.png"
+            }]
         ]
 
     /*

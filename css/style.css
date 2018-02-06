@@ -1,8 +1,8 @@
 html {
 font-family: "Roboto", sans serif;
-font-weight: 300;
+font-weight: 200;
 }
 
-.logo {
-    font-family: fantasy;
+.card-small {
+  height: 250px;
 }
