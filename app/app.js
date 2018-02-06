@@ -1,20 +1,13 @@
 /*global $ angular*/
 (function(){
-    $(document).ready(function() {
-    $('select').material_select();
-  });
+
     var app = angular.module('carRental', []);
-    
+
     app.controller('RentalController', function(){
         this.info = company;
         this.rentals = rentals;
     });
-    
-    app.controller('SelectionController', function(){
-        
-        
-    });
-    
+
     var company = {
         name: "Angular Rentals",
         types: [{
@@ -30,9 +23,9 @@
             available: 5,
             price: 550
         }]
-        
+
     }
-    
+
     var rentals = [
             {
                 name: 'Toyota Prius',
@@ -83,8 +76,8 @@
                 price: 550
             }
         ]
-    
-    /* 
+
+    /*
         Car image
         Car type
         Car description
@@ -96,6 +89,11 @@
         Car type
         Unavailable shown
     */
-    
-    
+
+
 })();
+
+//Materialize inits
+$(document).ready(function() {
+    $('select').material_select();
+});
