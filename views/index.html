@@ -35,72 +35,25 @@
                     <h4 class="flow-text">Select a Vehicle:</h4>
                     <div class="divider"></div>
                     <div class="container-fluid">
-                        <!--  tabs  -->
-                        <ul id="tabs-swipe-demo" class="tabs">
-                            <li class="tab col s4"><a href="#test-swipe-1">Compact</a></li>
-                            <li class="tab col s4"><a class="active" href="#test-swipe-2">SUV</a></li>
-                            <li class="tab col s4"><a href="#test-swipe-3">Luxury</a></li>
-                        </ul>
-
-                        <div id="test-swipe-1" ng-repeat="car in store.rentals[0]" class="col s6 m4">
-                            <div class="card small hoverable">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="activator" ng-src="{{car.img}}">
-                                </div>
-                                <div class="divider"></div>
-                                <div class="card-content">
-                                    <span class="card-title activator grey-text text-darken-4">{{car.name}}<i class="material-icons right">more_vert</i></span>
-                                    <!-- currency filter -->
-                                    <p class="flow-text">{{car.price | currency}}</p>
-
-                                </div>
-                                <div class="card-reveal">
-                                    <span class="card-title grey-text text-darken-4">{{car.name}}<i class="material-icons right">close</i></span>
-
-                                    <p>{{car.description}}</p>
-                                    <a class="waves-effect waves-light btn red lighten-1">Rent</a>
-                                </div>
-                            </div>
+                        <div class="row">
+                            <!--  tabs  -->
+                            <ul id="tabs-swipe-demo" class="tabs">
+                                <li class="tab col s4"><a href="#test-swipe-1">Compact</a></li>
+                                <li class="tab col s4"><a class="active" href="#test-swipe-2">SUV</a></li>
+                                <li class="tab col s4"><a href="#test-swipe-3">Luxury</a></li>
+                            </ul>
                         </div>
-
-                        <div id="test-swipe-2" ng-repeat="car in store.rentals[1]" class="col s6 m4">
-                            <div class="card small hoverable">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="activator" ng-src="{{car.img}}">
-                                </div>
-                                <div class="divider"></div>
-                                <div class="card-content">
-                                    <span class="card-title activator grey-text text-darken-4">{{car.name}}<i class="material-icons right">more_vert</i></span>
-                                    <!-- currency filter -->
-                                    <p class="flow-text">{{car.price | currency}}</p>
-
-                                </div>
-                                <div class="card-reveal">
-                                    <span class="card-title grey-text text-darken-4">{{car.name}}<i class="material-icons right">close</i></span>
-
-                                    <p>{{car.description}}</p>
-                                    <a class="waves-effect waves-light btn red lighten-1">Rent</a>
-                                </div>
+                        <!--  Gallery  -->
+                        <div class="row">
+                            <div id="test-swipe-1" class="col s12 m12">
+                                <!--refactored to use ng-include-->
+                                <div ng-include="'../views/tab1.htm'"></div>
                             </div>
-                        </div>
-                        <div id="test-swipe-3" ng-repeat="car in store.rentals[2]" class="col s6 m4">
-                            <div class="card small hoverable">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="activator" ng-src="{{car.img}}">
-                                </div>
-                                <div class="divider"></div>
-                                <div class="card-content">
-                                    <span class="card-title activator grey-text text-darken-4">{{car.name}}<i class="material-icons right">more_vert</i></span>
-                                    <!-- currency filter -->
-                                    <p class="flow-text">{{car.price | currency}}</p>
-
-                                </div>
-                                <div class="card-reveal">
-                                    <span class="card-title grey-text text-darken-4">{{car.name}}<i class="material-icons right">close</i></span>
-
-                                    <p>{{car.description}}</p>
-                                    <a class="waves-effect waves-light btn red lighten-1">Rent</a>
-                                </div>
+                            <div id="test-swipe-2" class="col s12 m12">
+                                <div ng-include="'../views/tab2.htm'"></div>
+                            </div>
+                            <div id="test-swipe-3" class="col s12 m12">
+                                <div ng-include="'../views/tab3.htm'"></div>
                             </div>
                         </div>
                     </div>
@@ -108,10 +61,6 @@
             </div>
         </div>
     </div>
-
-    <!--  Gallery  -->
-
-
 
     <!-- Materialize Javascript + jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
