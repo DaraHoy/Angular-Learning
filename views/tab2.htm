@@ -1,4 +1,4 @@
-<div ng-repeat="car in store.rentals[1]"class="card small hoverable col s6 m4">
+<div ng-repeat="car in store.rentals[1]" class="card small hoverable col s6 m4 l3">
     <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" ng-src="{{car.img}}">
     </div>
@@ -12,7 +12,14 @@
     <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">{{car.name}}<i class="material-icons right">close</i></span>
 
-        <p>{{car.description}}</p>
-        <a class="waves-effect waves-light btn red lighten-1">Rent</a>
+        <div ng-hide="car.available < 1">
+            <p>{{car.description}}</p>
+            <p>Available: {{car.available}}</p>
+            <a class="waves-effect waves-light btn red lighten-1" ng-click="store.rent(car.type, car.id)">Rent Now</a>
+        </div>
+        <div ng-show="car.available < 1">
+            <p>We're sorry!</p>
+            <p>Our {{car.name}} is unavailable.</p>
+        </div>
     </div>
 </div>

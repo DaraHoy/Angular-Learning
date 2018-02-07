@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <!-- Materialize CDN -->
+    <!-- Materialize CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" type="text/css" />
     <title>Chunking Express</title>
 </head>
+
 <body ng-app="carRental">
     <!--  Nav  -->
-     <nav>
+    <nav>
         <div class="nav-wrapper blue-grey darken-4">
-          <a href="#" class="brand-logo center yellow-text">CHUNKING EXPRESS</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#" >Reservations</a></li>
-            <li><a href="#" >Cars & Service</a></li>
-          </ul>
+            <a href="#" class="brand-logo center yellow-text">CHUNKING EXPRESS</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#">Reservations</a></li>
+                <li><a href="#">Cars & Service</a></li>
+            </ul>
         </div>
-      </nav>
+    </nav>
     <!--  Display  -->
     <div class="container-fluid">
         <div class="col s12">
@@ -32,27 +34,27 @@
         <div class="row">
             <div class="col s12">
                 <div ng-controller="RentalController as store" class="center">
-                    <h4 class="flow-text">Select a Vehicle:</h4>
+                    <h4 class="flow-text">Total Available: {{store.info.available}}</h4>
                     <div class="divider"></div>
                     <div class="container-fluid">
                         <div class="row">
                             <!--  tabs  -->
-                            <ul id="tabs-swipe-demo" class="tabs">
-                                <li class="tab col s4"><a href="#test-swipe-1">Compact</a></li>
-                                <li class="tab col s4"><a class="active" href="#test-swipe-2">SUV</a></li>
-                                <li class="tab col s4"><a href="#test-swipe-3">Luxury</a></li>
+                            <ul id="tabs" class="tabs">
+                                <li class="tab col s4"><a class="active" href="#tab-1">Compact</a></li>
+                                <li class="tab col s4"><a href="#tab-2">SUV</a></li>
+                                <li class="tab col s4"><a href="#tab-3">Luxury</a></li>
                             </ul>
                         </div>
                         <!--  Gallery  -->
                         <div class="row">
-                            <div id="test-swipe-1" class="col s12 m12">
-                                <!--refactored to use ng-include-->
+                            <div id="tab-1" class="col s12 m12">
+                                <!-- refactored to use ng-include tab htm files in /views -->
                                 <div ng-include="'../views/tab1.htm'"></div>
                             </div>
-                            <div id="test-swipe-2" class="col s12 m12">
+                            <div id="tab-2" class="col s12 m12">
                                 <div ng-include="'../views/tab2.htm'"></div>
                             </div>
-                            <div id="test-swipe-3" class="col s12 m12">
+                            <div id="tab-3" class="col s12 m12">
                                 <div ng-include="'../views/tab3.htm'"></div>
                             </div>
                         </div>
@@ -69,4 +71,5 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <script type="text/javascript" src="../app/app.js"></script>
 </body>
+
 </html>
