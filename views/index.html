@@ -32,14 +32,14 @@
         <div class="row">
             <div class="col s12">
                 <div ng-controller="RentalController as store" class="center">
-                    <h4>Catch a Ride</h4>
-                    <p>Select a Vehicle:</p>
+                    <h4 class="flow-text">Select a Vehicle:</h4>
+                    <div class="divider"></div>
                     <div class="container-fluid">
                         <!--  tabs  -->
                         <ul id="tabs-swipe-demo" class="tabs">
-                            <li class="tab col s4"><a href="#test-swipe-1">{{store.info.types[0].type}}</a></li>
-                            <li class="tab col s4"><a class="active" href="#test-swipe-2">{{store.info.types[1].type}}</a></li>
-                            <li class="tab col s4"><a href="#test-swipe-3">{{store.info.types[2].type}}</a></li>
+                            <li class="tab col s4"><a href="#test-swipe-1">Compact</a></li>
+                            <li class="tab col s4"><a class="active" href="#test-swipe-2">SUV</a></li>
+                            <li class="tab col s4"><a href="#test-swipe-3">Luxury</a></li>
                         </ul>
 
                         <div id="test-swipe-1" ng-repeat="car in store.rentals[0]" class="col s6 m4">
